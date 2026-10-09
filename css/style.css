@@ -156,6 +156,42 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .preview-disclaimer p { margin: 0; font-size: 10px; line-height: 1.7; }
 .preview-resources-link { display: flex; width: fit-content; margin: 24px auto 0; }
 
+.subscription-section { max-width: 1000px; margin: 68px auto 0; }
+.subscription-heading { max-width: 600px; margin-bottom: 27px; }
+.subscription-heading h3, .survey-heading h3 { margin: 0; color: var(--forest); font-size: 23px; line-height: 1.25; }
+.subscription-heading > p:last-child, .survey-heading > p:last-child { margin: 10px 0 0; color: var(--muted); font-size: 12px; line-height: 1.7; }
+.subscription-grid { display: grid; gap: 13px; }
+.subscription-card { position: relative; display: flex; flex-direction: column; min-height: 270px; padding: 21px; border: 1px solid #dfe9e2; border-radius: 8px; background: #fff; transition: border-color .2s ease, box-shadow .2s ease; }
+.subscription-card.is-recommended { border-color: var(--green); box-shadow: 0 0 0 2px rgba(16, 185, 129, .1); }
+.plan-recommendation { align-self: flex-start; margin-bottom: 12px; padding: 6px 8px; border-radius: 4px; color: #087751; background: #e7f7ef; font-size: 9px; font-weight: 800; }
+.plan-recommendation[hidden] { display: none; }
+.subscription-kicker { margin: 0 0 6px; color: #71847a; font-size: 9px; font-weight: 700; text-transform: uppercase; }
+.subscription-card h4 { margin: 0; color: var(--forest); font-size: 19px; }
+.subscription-range { margin: 7px 0 14px; color: var(--green); font-size: 11px; font-weight: 700; }
+.subscription-card ul { display: grid; gap: 9px; margin: 0 0 20px; padding: 0; color: #536a5f; font-size: 10px; list-style: none; }
+.subscription-card li { display: flex; align-items: flex-start; gap: 8px; line-height: 1.5; }
+.subscription-card li i { margin-top: 2px; color: var(--green); font-size: 10px; }
+.plan-select-button { width: 100%; min-height: 42px; margin-top: auto; padding-inline: 12px; font-size: 11px; }
+.plan-select-button[aria-pressed="true"] { color: var(--forest); background: #dff4e9; box-shadow: inset 0 0 0 1px #a8ddc0; }
+.subscription-disclaimer { margin: 13px 0 0; color: #7a8b82; font-size: 10px; line-height: 1.7; }
+
+.interest-survey { max-width: 850px; margin: 64px auto 0; padding-top: 36px; border-top: 1px solid #dce7e0; scroll-margin-top: 24px; }
+.survey-heading { margin-bottom: 23px; }
+.survey-fieldset { min-width: 0; margin: 0 0 22px; padding: 0; border: 0; }
+.survey-fieldset legend { margin-bottom: 12px; color: #30483e; font-size: 11px; font-weight: 800; }
+.survey-fieldset legend span { color: #84958b; font-size: 10px; font-weight: 500; }
+.survey-options, .survey-plan-options { display: grid; gap: 9px; }
+.survey-options label, .survey-plan-options label { display: flex; min-height: 42px; align-items: center; gap: 9px; padding: 10px 12px; border: 1px solid #dfe8e2; border-radius: 6px; color: #52695e; background: #fff; font-size: 10px; line-height: 1.5; cursor: pointer; }
+.survey-options input, .survey-plan-options input { width: 16px; height: 16px; flex: 0 0 16px; margin: 0; accent-color: var(--green); }
+.survey-text-label { display: block; margin-bottom: 8px; color: #30483e; font-size: 11px; font-weight: 800; }
+#survey-feedback { display: block; width: 100%; min-height: 100px; padding: 12px; border: 1px solid #dfe8e2; border-radius: 6px; color: var(--ink); background: #fff; font-size: 11px; line-height: 1.6; resize: vertical; }
+#survey-feedback::placeholder { color: #a2afa8; }
+#survey-feedback:focus-visible { border-color: var(--green); outline: 3px solid rgba(16, 185, 129, .12); }
+.survey-submit { min-height: 46px; margin-top: 13px; }
+.survey-status { min-height: 0; margin: 12px 0 0; color: #087751; font-size: 11px; font-weight: 700; line-height: 1.6; }
+.survey-status:not(:empty) { min-height: 18px; }
+.survey-disclaimer { display: block; margin-top: 8px; color: #829188; font-size: 9px; line-height: 1.6; }
+
 .how-it-works { background: var(--surface); }
 .how-layout { display: grid; gap: 46px; align-items: center; }
 .how-intro > p:not(.eyebrow) { max-width: 430px; margin: 16px 0 24px; color: var(--muted); font-size: 13px; line-height: 1.8; }
@@ -182,6 +218,12 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .footer-brand .brand-icon { width: 29px; height: 29px; font-size: 14px; }
 .footer-content p { margin: 0; color: #72837a; font-size: 10px; }
 .footer-content small { color: #87968e; font-size: 9px; }
+.footer-contact { display: grid; grid-template-columns: repeat(3, auto); gap: 8px 14px; margin-left: auto; padding-left: 18px; border-left: 1px solid #dce7e0; }
+.footer-contact strong, .footer-contact small { grid-column: 1 / -1; }
+.footer-contact strong { color: var(--forest); font-size: 10px; }
+.footer-contact span { display: inline-flex; align-items: center; gap: 6px; color: #667b70; font-size: 9px; }
+.footer-contact span i { color: var(--green); }
+.footer-contact small { color: #9a7770; font-size: 8px; }
 
 @keyframes spin { to { transform: rotate(360deg); } }
 @keyframes reveal { from { opacity: 0; transform: translateY(9px); } to { opacity: 1; transform: translateY(0); } }
@@ -190,6 +232,9 @@ button, a { -webkit-tap-highlight-color: transparent; }
 	.hero-layout { grid-template-columns: minmax(0, 1.1fr) minmax(350px, .8fr); gap: 54px; }
 	.feature-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 	.preview-module-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+	.subscription-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+	.survey-options { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+	.survey-plan-options { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 	.how-layout { grid-template-columns: .9fr 1fr; gap: 100px; }
 	.advantages-layout { grid-template-columns: 1.1fr 1fr; column-gap: 70px; }
 	.advantages-layout .button { grid-column: 2; }
@@ -211,6 +256,10 @@ button, a { -webkit-tap-highlight-color: transparent; }
 	.section-heading > p:last-child { margin-inline: 0; }
 	.preview-content { padding: 16px; }
 	.preview-topbar { padding-inline: 16px; }
+	.subscription-section { margin-top: 52px; }
+	.subscription-card { min-height: 0; }
+	.footer-contact { order: 2; width: 100%; grid-template-columns: 1fr; margin-left: 0; padding: 14px 0 0; border: 0; border-top: 1px solid #dce7e0; }
+	.footer-content small { order: 3; width: 100%; margin-left: 0; }
 	.feature-grid { grid-template-columns: 1fr; }
 	.feature-card { min-height: 225px; }
 	.how-layout { gap: 35px; }

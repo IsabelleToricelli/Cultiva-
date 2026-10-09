@@ -5,6 +5,10 @@ const successCopy = document.querySelector("#success-copy");
 const productPreview = document.querySelector("#product-preview");
 const previewGreeting = document.querySelector("#preview-greeting");
 const previewArea = document.querySelector("#preview-area");
+const interestSurvey = document.querySelector("#interest-survey-form");
+const surveyStatus = document.querySelector("#survey-status");
+const planCards = document.querySelectorAll("[data-plan-card]");
+const planButtons = document.querySelectorAll("[data-select-plan]");
 const menuToggle = document.querySelector(".menu-toggle");
 const navigation = document.querySelector("#primary-navigation");
 
@@ -23,6 +27,14 @@ form.addEventListener("submit", (event) => {
         successCopy.textContent = `Obrigado, ${name}. Preparamos uma prévia ilustrativa para sua propriedade.`;
         previewGreeting.textContent = `Veja como o Cultiva pode organizar as informações da propriedade de ${name}.`;
         previewArea.textContent = `${hectares.toLocaleString("pt-BR", { maximumFractionDigits: 2 })} ha`;
+        const recommendedPlan = hectares <= 100 ? "essencial" : hectares <= 500 ? "profissional" : "empresarial";
+
+        planCards.forEach((card) => {
+            const isRecommended = card.dataset.planCard === recommendedPlan;
+            card.classList.toggle("is-recommended", isRecommended);
+            card.querySelector(".plan-recommendation").hidden = !isRecommended;
+        });
+
         form.hidden = true;
         document.querySelector(".form-intro").hidden = true;
         successMessage.hidden = false;
@@ -30,6 +42,51 @@ form.addEventListener("submit", (event) => {
         productPreview.scrollIntoView({ behavior: "smooth", block: "start" });
     }, 900);
 });
+
+planButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+        const selectedPlan = button.dataset.selectPlan;
+        const planInput = interestSurvey.querySelector(`input[name="plan"][value="${selectedPlan}"]`);
+        planInput.checked = true;
+        updatePlanButtons(selectedPlan);
+        surveyStatus.textContent = `Plano ${planInput.labels[0].textContent.trim()} selecionado como interesse.`;
+        interestSurvey.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+});
+
+interestSurvey.querySelectorAll('input[name="plan"]').forEach((input) => {
+    input.addEventListener("change", () => updatePlanButtons(input.value));
+});
+
+interestSurvey.addEventListener("submit", (event) => {
+    event.preventDefault();
+    if (!interestSurvey.reportValidity()) return;
+
+    const selectedNeeds = new FormData(interestSurvey).getAll("needs");
+    const needLabels = {
+        clima: "clima",
+        solo: "solo",
+        agua: "irrigação e água",
+        insumos: "insumos e custos",
+        monitoramento: "monitoramento da lavoura"
+    };
+    const selectedPlan = new FormData(interestSurvey).get("plan");
+    const priorities = selectedNeeds.map((need) => needLabels[need]);
+    const priorityMessage = priorities.length
+        ? `Você destacou ${priorities.join(", ")}. `
+        : "Você não marcou prioridades específicas. ";
+    const planMessage = selectedPlan && selectedPlan !== "nao-sei"
+        ? `Seu plano de interesse: ${selectedPlan}. `
+        : "";
+
+    surveyStatus.textContent = `${priorityMessage}${planMessage}Sua opinião ainda não é enviada nem armazenada pela Cultiva.`;
+});
+
+function updatePlanButtons(selectedPlan) {
+    planButtons.forEach((button) => {
+        button.setAttribute("aria-pressed", String(button.dataset.selectPlan === selectedPlan));
+    });
+}
 
 menuToggle.addEventListener("click", () => {
     const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";

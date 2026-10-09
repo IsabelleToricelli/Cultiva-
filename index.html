@@ -156,6 +156,87 @@
                         <div class="preview-disclaimer"><i class="fa-solid fa-circle-info" aria-hidden="true"></i><p>Esta é uma prévia ilustrativa, não uma análise da sua propriedade. Recomendações reais dependem da integração de dados de clima, solo e localização.</p></div>
                     </div>
                 </div>
+
+                <div class="subscription-section">
+                    <div class="subscription-heading">
+                        <p class="eyebrow">Planos em construção</p>
+                        <h3>Um ponto de partida para cada operação.</h3>
+                        <p>Veja qual formato parece combinar com a sua área. Os planos e valores ainda serão definidos.</p>
+                    </div>
+                    <div class="subscription-grid">
+                        <article class="subscription-card" data-plan-card="essencial">
+                            <span class="plan-recommendation" hidden>Indicado para sua área</span>
+                            <p class="subscription-kicker">Para começar</p>
+                            <h4>Essencial</h4>
+                            <p class="subscription-range">Até 100 hectares</p>
+                            <ul>
+                                <li><i class="fa-solid fa-check" aria-hidden="true"></i> Clima e alertas</li>
+                                <li><i class="fa-solid fa-check" aria-hidden="true"></i> Visão geral da propriedade</li>
+                            </ul>
+                            <button class="button plan-select-button" type="button" data-select-plan="essencial" aria-pressed="false">Tenho interesse</button>
+                        </article>
+                        <article class="subscription-card" data-plan-card="profissional">
+                            <span class="plan-recommendation" hidden>Indicado para sua área</span>
+                            <p class="subscription-kicker">Para acompanhar mais</p>
+                            <h4>Profissional</h4>
+                            <p class="subscription-range">Acima de 100 até 500 hectares</p>
+                            <ul>
+                                <li><i class="fa-solid fa-check" aria-hidden="true"></i> Clima e solo</li>
+                                <li><i class="fa-solid fa-check" aria-hidden="true"></i> Gestão de insumos</li>
+                                <li><i class="fa-solid fa-check" aria-hidden="true"></i> Relatórios da operação</li>
+                            </ul>
+                            <button class="button plan-select-button" type="button" data-select-plan="profissional" aria-pressed="false">Tenho interesse</button>
+                        </article>
+                        <article class="subscription-card" data-plan-card="empresarial">
+                            <span class="plan-recommendation" hidden>Indicado para sua área</span>
+                            <p class="subscription-kicker">Para operações maiores</p>
+                            <h4>Empresarial</h4>
+                            <p class="subscription-range">Mais de 500 hectares</p>
+                            <ul>
+                                <li><i class="fa-solid fa-check" aria-hidden="true"></i> Visão de múltiplas áreas</li>
+                                <li><i class="fa-solid fa-check" aria-hidden="true"></i> Gestão para equipes</li>
+                                <li><i class="fa-solid fa-check" aria-hidden="true"></i> Relatórios ampliados</li>
+                            </ul>
+                            <button class="button plan-select-button" type="button" data-select-plan="empresarial" aria-pressed="false">Tenho interesse</button>
+                        </article>
+                    </div>
+                    <p class="subscription-disclaimer">Faixas e recursos são propostas para pesquisa. Preços e condições ainda não foram definidos.</p>
+                </div>
+
+                <section class="interest-survey" aria-labelledby="survey-title">
+                    <div class="survey-heading">
+                        <p class="eyebrow">Sua opinião importa</p>
+                        <h3 id="survey-title">O que faria diferença na sua rotina?</h3>
+                        <p>Conte quais desafios o Cultiva deveria ajudar a resolver.</p>
+                    </div>
+                    <form id="interest-survey-form">
+                        <fieldset class="survey-fieldset">
+                            <legend>Quais temas são prioridade para você? <span>Selecione todos que se aplicam.</span></legend>
+                            <div class="survey-options">
+                                <label><input type="checkbox" name="needs" value="clima"> Previsão do tempo e alertas</label>
+                                <label><input type="checkbox" name="needs" value="solo"> Análise e acompanhamento do solo</label>
+                                <label><input type="checkbox" name="needs" value="agua"> Irrigação e uso de água</label>
+                                <label><input type="checkbox" name="needs" value="insumos"> Insumos e custos da safra</label>
+                                <label><input type="checkbox" name="needs" value="monitoramento"> Monitoramento da lavoura</label>
+                            </div>
+                        </fieldset>
+                        <fieldset class="survey-fieldset plan-fieldset">
+                            <legend>Qual plano parece mais adequado para você? <span>Opcional.</span></legend>
+                            <div class="survey-plan-options">
+                                <label><input type="radio" name="plan" value="essencial"> Essencial</label>
+                                <label><input type="radio" name="plan" value="profissional"> Profissional</label>
+                                <label><input type="radio" name="plan" value="empresarial"> Empresarial</label>
+                                <label><input type="radio" name="plan" value="nao-sei"> Ainda não sei</label>
+                            </div>
+                        </fieldset>
+                        <label class="survey-text-label" for="survey-feedback">O que você gostaria que a plataforma fizesse?</label>
+                        <textarea id="survey-feedback" name="feedback" rows="4" minlength="8" maxlength="500" placeholder="Descreva uma necessidade da sua propriedade..." required></textarea>
+                        <button class="button survey-submit" type="submit">Registrar minha opinião <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+                        <p class="survey-status" id="survey-status" role="status" aria-live="polite"></p>
+                        <small class="survey-disclaimer">Demonstração: sua resposta não é enviada nem armazenada pela Cultiva.</small>
+                    </form>
+                </section>
+
                 <a class="button button-dark preview-resources-link" href="#recursos">Explorar recursos <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
             </div>
         </section>
@@ -228,6 +309,13 @@
         <div class="container footer-content">
             <a class="brand footer-brand" href="#inicio"><span class="brand-icon"><i class="fa-solid fa-seedling" aria-hidden="true"></i></span><span>Cultiva</span></a>
             <p>Inteligência que cultiva um futuro melhor.</p>
+            <div class="footer-contact" aria-label="Contatos fictícios para demonstração">
+                <strong>Fale com a Cultiva</strong>
+                <span><i class="fa-regular fa-envelope" aria-hidden="true"></i> contato@cultiva.example</span>
+                <span><i class="fa-solid fa-phone" aria-hidden="true"></i> +55 (11) 0000-0000</span>
+                <span><i class="fa-brands fa-instagram" aria-hidden="true"></i> @cultiva.exemplo</span>
+                <small>Contatos fictícios, não funcionais.</small>
+            </div>
             <small>&copy; <span id="current-year">2026</span> Cultiva. Todos os direitos reservados.</small>
         </div>
     </footer>
