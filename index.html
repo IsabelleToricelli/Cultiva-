@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f6faf7">
+    <meta name="description" content="Cultiva combina inteligência artificial e dados de campo para ajudar você a produzir mais, usar melhor os recursos e decidir com confiança.">
+    <title>Cultiva | O futuro da sua plantação</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container nav-container">
+            <a class="brand" href="#inicio" aria-label="Cultiva, início">
+                <span class="brand-icon"><i class="fa-solid fa-seedling" aria-hidden="true"></i></span>
+                <span>Cultiva</span>
+            </a>
+
+            <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="primary-navigation">
+                <i class="fa-solid fa-bars" aria-hidden="true"></i>
+            </button>
+
+            <nav class="nav-links" id="primary-navigation" aria-label="Navegação principal">
+                <a href="#recursos">Recursos</a>
+                <a href="#como-funciona">Como funciona</a>
+                <a href="#vantagens">Vantagens</a>
+                <a class="button button-small nav-cta" href="#pre-venda">Garantir vaga <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="inicio">
+            <div class="hero-shade" aria-hidden="true"></div>
+            <div class="container hero-layout">
+                <div class="hero-copy">
+                    <p class="launch-badge"><span></span> Pré-venda aberta para produtores</p>
+                    <h1>O futuro da sua plantação na <span>palma da sua mão.</span></h1>
+                    <p class="hero-description">A inteligência artificial do Cultiva transforma dados do campo em decisões mais seguras para sua lavoura, seus recursos e seu negócio.</p>
+
+                    <div class="hero-results" aria-label="Resultados esperados">
+                        <div class="result-item">
+                            <strong>+25%</strong>
+                            <span>Produtividade</span>
+                        </div>
+                        <div class="result-item">
+                            <strong>-30%</strong>
+                            <span>Uso de água</span>
+                        </div>
+                        <div class="result-item">
+                            <strong><i class="fa-solid fa-circle-check" aria-hidden="true"></i></strong>
+                            <span>Monitoramento 24/7</span>
+                        </div>
+                    </div>
+
+                    <a class="text-link" href="#recursos">Conheça a plataforma <i class="fa-solid fa-arrow-down" aria-hidden="true"></i></a>
+                </div>
+
+                <aside class="signup-card" id="pre-venda" aria-labelledby="signup-title">
+                    <div class="card-kicker"><span class="kicker-icon"><i class="fa-solid fa-leaf" aria-hidden="true"></i></span> Acesso antecipado</div>
+                    <h2 id="signup-title">Sua próxima safra começa aqui.</h2>
+                    <p class="form-intro">Entre na lista de pré-venda e descubra uma nova forma de cuidar da sua produção.</p>
+
+                    <form id="presale-form">
+                        <label for="full-name">Nome completo</label>
+                        <div class="input-wrap">
+                            <i class="fa-regular fa-user" aria-hidden="true"></i>
+                            <input id="full-name" name="name" type="text" placeholder="Como podemos chamar você?" autocomplete="name" minlength="2" required>
+                        </div>
+
+                        <label for="email">E-mail profissional</label>
+                        <div class="input-wrap">
+                            <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+                            <input id="email" name="email" type="email" placeholder="voce@suaempresa.com.br" autocomplete="email" required>
+                        </div>
+
+                        <label for="hectares">Tamanho da propriedade</label>
+                        <div class="input-wrap">
+                            <i class="fa-solid fa-ruler-combined" aria-hidden="true"></i>
+                            <input id="hectares" name="hectares" type="number" placeholder="Ex.: 120" min="0.1" step="any" inputmode="decimal" required>
+                            <span class="input-unit">hectares</span>
+                        </div>
+
+                        <button class="button submit-button" type="submit">
+                            <span class="button-label">Quero garantir minha vaga</span>
+                            <span class="button-spinner" aria-hidden="true"></span>
+                            <i class="fa-solid fa-arrow-right button-arrow" aria-hidden="true"></i>
+                        </button>
+                        <p class="privacy-note"><i class="fa-solid fa-lock" aria-hidden="true"></i> Seus dados ficam protegidos. Sem compromisso.</p>
+                    </form>
+
+                    <div class="success-message" id="success-message" role="status" aria-live="polite" hidden>
+                        <span class="success-icon"><i class="fa-solid fa-check" aria-hidden="true"></i></span>
+                        <h3>Obrigado pelo interesse!</h3>
+                        <p id="success-copy">Seu interesse foi registrado nesta demonstração.</p>
+                        <small>A conexão com um serviço de cadastro pode ser adicionada para receber os dados.</small>
+                    </div>
+                </aside>
+            </div>
+            <div class="hero-note" aria-hidden="true"><span>TECNOLOGIA QUE CULTIVA</span><i class="fa-solid fa-plus"></i><span>RESULTADOS NO CAMPO</span></div>
+        </section>
+
+        <section class="features section-space" id="recursos">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">Inteligência que cresce com você</p>
+                    <h2>Mais clareza para cada decisão no campo.</h2>
+                    <p>Informação precisa, no momento certo, para transformar o potencial da sua propriedade em resultado.</p>
+                </div>
+
+                <div class="feature-grid">
+                    <article class="feature-card feature-weather">
+                        <span class="feature-icon"><i class="fa-solid fa-cloud-sun" aria-hidden="true"></i></span>
+                        <p class="feature-number">01 / CLIMA</p>
+                        <h3>Previsão climática hiperlocal</h3>
+                        <p>Antecipe mudanças no tempo com previsões ajustadas à realidade de cada área da sua propriedade.</p>
+                        <span class="feature-arrow" aria-hidden="true"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                    </article>
+
+                    <article class="feature-card feature-soil">
+                        <span class="feature-icon"><i class="fa-solid fa-layer-group" aria-hidden="true"></i></span>
+                        <p class="feature-number">02 / SOLO</p>
+                        <h3>Análise de solo inteligente</h3>
+                        <p>Entenda as condições do solo e encontre oportunidades para cuidar melhor de cada talhão.</p>
+                        <span class="feature-arrow" aria-hidden="true"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                    </article>
+
+                    <article class="feature-card feature-inputs">
+                        <span class="feature-icon"><i class="fa-solid fa-chart-pie" aria-hidden="true"></i></span>
+                        <p class="feature-number">03 / GESTÃO</p>
+                        <h3>Gestão de insumos</h3>
+                        <p>Acompanhe o uso de recursos em um só lugar e planeje cada etapa com mais eficiência.</p>
+                        <span class="feature-arrow" aria-hidden="true"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="how-it-works section-space" id="como-funciona">
+            <div class="container how-layout">
+                <div class="how-intro">
+                    <p class="eyebrow">Simples como deve ser</p>
+                    <h2>Do dado à decisão, sem complicação.</h2>
+                    <p>O Cultiva reúne informações importantes da sua lavoura para você agir com mais confiança, de onde estiver.</p>
+                    <a class="button button-dark" href="#pre-venda">Quero conhecer <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                </div>
+                <ol class="steps-list">
+                    <li><span class="step-count">01</span><div><h3>Conecte sua propriedade</h3><p>Conte para a plataforma sobre sua área e suas necessidades.</p></div></li>
+                    <li><span class="step-count">02</span><div><h3>Acompanhe os sinais do campo</h3><p>Veja clima, solo e insumos em uma visão clara e integrada.</p></div></li>
+                    <li><span class="step-count">03</span><div><h3>Decida com mais confiança</h3><p>Use recomendações inteligentes para planejar os próximos passos.</p></div></li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="advantages" id="vantagens">
+            <div class="container advantages-layout">
+                <div>
+                    <p class="eyebrow eyebrow-light">Mais que tecnologia</p>
+                    <h2>Uma parceria para cultivar o que vem pela frente.</h2>
+                </div>
+                <p class="advantages-copy">Produzir melhor também é cuidar dos recursos, reduzir incertezas e construir uma operação mais preparada para o futuro. O Cultiva aproxima a inteligência artificial da realidade de quem vive o campo.</p>
+                <a class="button button-light" href="#pre-venda">Faça parte da pré-venda <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <a class="brand footer-brand" href="#inicio"><span class="brand-icon"><i class="fa-solid fa-seedling" aria-hidden="true"></i></span><span>Cultiva</span></a>
+            <p>Inteligência que cultiva um futuro melhor.</p>
+            <small>&copy; <span id="current-year">2026</span> Cultiva. Todos os direitos reservados.</small>
+        </div>
+    </footer>
+</body>
+</html>
