@@ -92,18 +92,72 @@
                             <span class="button-spinner" aria-hidden="true"></span>
                             <i class="fa-solid fa-arrow-right button-arrow" aria-hidden="true"></i>
                         </button>
-                        <p class="privacy-note"><i class="fa-solid fa-lock" aria-hidden="true"></i> Seus dados ficam protegidos. Sem compromisso.</p>
+                        <p class="privacy-note"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> Prévia demonstrativa; seus dados não são enviados.</p>
                     </form>
 
                     <div class="success-message" id="success-message" role="status" aria-live="polite" hidden>
                         <span class="success-icon"><i class="fa-solid fa-check" aria-hidden="true"></i></span>
-                        <h3>Obrigado pelo interesse!</h3>
-                        <p id="success-copy">Seu interesse foi registrado nesta demonstração.</p>
-                        <small>A conexão com um serviço de cadastro pode ser adicionada para receber os dados.</small>
+                        <h3>Prévia liberada!</h3>
+                        <p id="success-copy">Sua experiência demonstrativa está pronta.</p>
+                        <a class="button success-preview-link" href="#product-preview">Ver minha prévia <i class="fa-solid fa-arrow-down" aria-hidden="true"></i></a>
+                        <small>Esta demonstração não envia seus dados para um serviço de cadastro.</small>
                     </div>
                 </aside>
             </div>
             <div class="hero-note" aria-hidden="true"><span>TECNOLOGIA QUE CULTIVA</span><i class="fa-solid fa-plus"></i><span>RESULTADOS NO CAMPO</span></div>
+        </section>
+
+        <section class="product-preview section-space" id="product-preview" aria-labelledby="preview-title" hidden>
+            <div class="container">
+                <div class="section-heading preview-heading">
+                    <p class="eyebrow">Por dentro do Cultiva</p>
+                    <h2 id="preview-title">Uma visão mais clara da sua propriedade.</h2>
+                    <p id="preview-greeting">Veja como clima, solo e insumos podem se reunir em um só lugar.</p>
+                </div>
+
+                <div class="preview-panel">
+                    <div class="preview-topbar">
+                        <span class="preview-brand"><i class="fa-solid fa-seedling" aria-hidden="true"></i> Cultiva</span>
+                        <span class="preview-topbar-label">PAINEL DEMONSTRATIVO</span>
+                    </div>
+                    <div class="preview-content">
+                        <div class="preview-overview">
+                            <div>
+                                <span class="preview-label">ÁREA DA PROPRIEDADE</span>
+                                <strong id="preview-area">-- ha</strong>
+                            </div>
+                            <span class="preview-demo-badge"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> Exemplo visual</span>
+                        </div>
+
+                        <div class="preview-module-grid">
+                            <article class="preview-module">
+                                <span class="preview-module-icon weather-icon"><i class="fa-solid fa-cloud-sun" aria-hidden="true"></i></span>
+                                <span class="preview-label">CLIMA HIPERLOCAL</span>
+                                <h3>Previsão por área</h3>
+                                <p>Condições do tempo organizadas para apoiar o planejamento da lavoura.</p>
+                                <span class="preview-status">Disponível ao conectar a propriedade</span>
+                            </article>
+                            <article class="preview-module">
+                                <span class="preview-module-icon soil-icon"><i class="fa-solid fa-layer-group" aria-hidden="true"></i></span>
+                                <span class="preview-label">ANÁLISE DE SOLO</span>
+                                <h3>Visão por talhão</h3>
+                                <p>Informações de solo reunidas para acompanhar as necessidades da área.</p>
+                                <span class="preview-status">Requer dados da propriedade</span>
+                            </article>
+                            <article class="preview-module">
+                                <span class="preview-module-icon inputs-icon"><i class="fa-solid fa-chart-pie" aria-hidden="true"></i></span>
+                                <span class="preview-label">GESTÃO DE INSUMOS</span>
+                                <h3>Recursos em contexto</h3>
+                                <p>Acompanhamento de insumos para planejar o uso ao longo da safra.</p>
+                                <span class="preview-status">Painel de acompanhamento</span>
+                            </article>
+                        </div>
+
+                        <div class="preview-disclaimer"><i class="fa-solid fa-circle-info" aria-hidden="true"></i><p>Esta é uma prévia ilustrativa, não uma análise da sua propriedade. Recomendações reais dependem da integração de dados de clima, solo e localização.</p></div>
+                    </div>
+                </div>
+                <a class="button button-dark preview-resources-link" href="#recursos">Explorar recursos <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
         </section>
 
         <section class="features section-space" id="recursos">
